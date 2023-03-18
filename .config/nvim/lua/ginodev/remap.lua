@@ -9,6 +9,9 @@ vim.keymap.set("v", "<leader>y", "\"+y", opts)
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 --Telescope
 local telescope = require('telescope.builtin')
@@ -18,3 +21,5 @@ vim.keymap.set('n', '<leader>fg', telescope.git_files, opts)
 vim.keymap.set('n', '<leader>fb', telescope.buffers, opts)
 vim.keymap.set('n', '<leader>fq', telescope.quickfix, opts)
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, opts)
+vim.keymap.set('n', '<leader>fd', telescope.diagnostics, opts)
+vim.keymap.set('n', '<leader>F', telescope.live_grep, opts)

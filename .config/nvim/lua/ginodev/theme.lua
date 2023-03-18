@@ -8,9 +8,9 @@ require("catppuccin").setup({
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = false,
     dim_inactive = {
-        enabled = false,
+        enabled = true,
         shade = "dark",
-        percentage = 0.15,
+        percentage = 0.25,
     },
     no_italic = false, -- Force no italic
     no_bold = false, -- Force no bold
@@ -37,6 +37,7 @@ require("catppuccin").setup({
         telescope = true,
         notify = false,
         mini = false,
+        harpoon = true
     },
 })
 

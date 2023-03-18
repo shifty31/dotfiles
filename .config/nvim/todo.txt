@@ -1,16 +1,6 @@
 #TODO
 
-- set up vimtex
 - colour brackets
 - change keyboard layout
 - eslint
 - format on save
-- backup dotfiles
-- general backup of computer
-- set up git for OverLeaf 
-
-
-
-
-
-
