@@ -3,6 +3,7 @@ require("mason").setup({
 })
 
 local lsp = require("lsp-zero")
+-- local lsp_config = require("lspconfig")
 
 lsp.preset("recommended")
 
@@ -21,6 +22,14 @@ lsp.configure('lua_ls', {
             }
         }
     }
+})
+
+lsp.configure('ltex', {
+    settings = {
+        ltex = {
+            language = "en-AU",
+        },
+    },
 })
 
 local cmp = require('cmp')
@@ -49,7 +58,7 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_preferences({
-    suggest_lsp_servers = false,
+    suggest_lsp_servers = true,
     sign_icons = {
         error = '😂',
         warn = 'W',
@@ -73,8 +82,13 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
-
 vim.diagnostic.config({
     virtual_text = true
+})
+
+
+lsp.setup({
+    root_dir = function(fname)
+        return vim.loop.cwd()
+    end
 })
