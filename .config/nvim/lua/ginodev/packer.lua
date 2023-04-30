@@ -71,6 +71,14 @@ return require('packer').startup(function(use)
 
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+    use {
+  "folke/trouble.nvim",
+  requires = "nvim-tree/nvim-web-devicons",
+  config = function()
+    require("trouble").setup{}
+  end
+}
+
     --LaTeX
     use('lervag/vimtex')
 end)
