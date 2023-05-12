@@ -1,0 +1,6 @@
+#TODO
+
+- colour brackets
+- change keyboard layout
+- eslint
+- format on save
