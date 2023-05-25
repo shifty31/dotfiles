@@ -67,14 +67,20 @@ unset color_prompt force_color_prompt
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+#
+# case "$TERM" in
+# xterm*|rxvt*)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#     ;;
+# *)
+#     ;;
 
+function pathadd {
+  case ":$PATH:" in
+    *":$1:"*) :;; # already there
+    *) if [ -z "$2" ]; then PATH="$1:$PATH"; else PATH="$PATH:$1"; fi ;; # or PATH="$PATH:$1"
+  esac
+}
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -121,7 +127,9 @@ fi
 
 . "$HOME/.cargo/env"
 
-export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
+pathadd "$HOME"/.config/scripts/
+pathadd /usr/local/texlive/2023/bin/x86_64-linux
+
 export EDITOR='nvim'
 
 ### Aliases ###
