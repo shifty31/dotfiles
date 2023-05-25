@@ -127,5 +127,9 @@ export EDITOR='nvim'
 ### Aliases ###
 alias ls='ls -al --color=always --group-directories-first'
 alias py='python3'
+alias rmi='rm -rfi'
+
+
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
