@@ -1,11 +1,10 @@
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-vim.keymap.set("n", "<leader>p", "\"+p", opts)
-vim.keymap.set("v", "<leader>p", "\"+p", opts)
-vim.keymap.set("n", "<leader>y", "\"+y", opts)
-vim.keymap.set("v", "<leader>y", "\"+y", opts)
+vim.keymap.set("n", "<leader>p", "\"0p", opts)
+vim.keymap.set("v", "<leader>p", "\"0p", opts)
+vim.keymap.set("n", "<leader>y", "\"0y", opts)
+vim.keymap.set("v", "<leader>y", "\"0y", opts)
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

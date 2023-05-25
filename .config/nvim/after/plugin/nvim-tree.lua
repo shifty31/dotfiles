@@ -28,7 +28,23 @@ require("nvim-tree").setup({
   },
 })
 
+local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<leader>mn", require("nvim-tree.api").marks.navigate.next)
-vim.keymap.set("n", "<leader>mp", require("nvim-tree.api").marks.navigate.prev)
-vim.keymap.set("n", "<leader>ms", require("nvim-tree.api").marks.navigate.select)
+local api = require("nvim-tree")
+
+local function toggleFocus()
+    local utils = require("nvim-tree.utils")
+    -- is either closed or not focused
+    local is_tree_buf = utils.is_nvim_tree_buf()
+
+    if is_tree_buf then
+        api.toggle()
+    else
+        api.focus()
+    end
+end
+
+-- vim.keymap.set("n", "<leader>mn", tree.marks.navigate.next)
+-- vim.keymap.set("n", "<leader>mp", tree.marks.navigate.prev)
+-- vim.keymap.set("n", "<leader>ms", tree.marks.navigate.select)
+vim.keymap.set("n", "<leader>e", toggleFocus, opts)

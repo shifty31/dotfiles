@@ -121,10 +121,11 @@ fi
 
 . "$HOME/.cargo/env"
 
-export PATH="/usr/local/texlive/2022/bin/x86_64-linux:$PATH"
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 export EDITOR='nvim'
 
 ### Aliases ###
 alias ls='ls -al --color=always --group-directories-first'
 alias py='python3'
-
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

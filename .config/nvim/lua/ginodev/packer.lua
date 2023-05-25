@@ -90,4 +90,9 @@ return require('packer').startup(function(use)
 
     --LaTeX
     use('lervag/vimtex')
+    -- gitsigns
+
+    use {
+        'lewis6991/gitsigns.nvim',
+    }
 end)
