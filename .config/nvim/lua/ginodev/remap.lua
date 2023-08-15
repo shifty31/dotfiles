@@ -25,3 +25,7 @@ vim.keymap.set('n', '<leader>fq', telescope.quickfix, opts)
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, opts)
 vim.keymap.set('n', '<leader>fd', telescope.diagnostics, opts)
 vim.keymap.set('n', '<leader>F', telescope.live_grep, opts)
+vim.keymap.set('n', '<leader>fo', telescope.oldfiles, opts)
+
+
+------- nvchad config ------
