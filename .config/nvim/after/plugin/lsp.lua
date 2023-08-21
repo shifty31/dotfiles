@@ -43,8 +43,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 local cmp_sources = {
-    { name = 'nvim_lsp', keyword_length = 3 },
-    { name = 'luasnip',  keyword_length = 3 },
+    { name = 'nvim_lsp', keyword_length = 1 },
+    { name = 'luasnip',  keyword_length = 2 },
     { name = 'buffer',   keyword_length = 3 },
     { name = 'nvim_lua', keyword_length = 3 },
     { name = 'path',     keyword_length = 3 },
@@ -73,7 +73,10 @@ local cmp_formats = {
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings,
     sources = cmp_sources,
-    formatting = cmp_formats
+    formatting = cmp_formats,
+    window = {
+        documentation = cmp.config.window.bordered()
+    },
 })
 
 lsp.set_preferences({
@@ -103,7 +106,14 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 
-    vim.diagnostic.config({ virtual_text = true })
+    vim.diagnostic.config({
+        virtual_text = true,
+        float = {
+            border = 'rounded',
+            source = 'always',
+        },
+        underline = true
+    })
 end)
 
 lsp.setup({
