@@ -100,9 +100,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -136,7 +133,10 @@ pathadd /usr/local/texlive/2023/bin/x86_64-linux
 export EDITOR='nvim'
 
 ### Aliases ###
-alias ls='ls -al --color=always --group-directories-first'
+alias ls='exa --oneline --long --header --icons --all --group-directories-first --sort=name --modified'
 alias py='python3'
 alias rmi='rm -rfi'
 alias start-pg='sudo service postgresql start'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
