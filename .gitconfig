@@ -1,5 +1,16 @@
 [init]
 	defaultBranch = main
+
 [user]
 	email = ginowashere@hotmail.com
 	name = Gino
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
