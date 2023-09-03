@@ -1,8 +1,11 @@
+
 [init]
 	defaultBranch = main
 
 [core]
+    sshCommand = "ssh -i ~/.ssh/id_ed25519"
     pager = delta
+    excludesfile = "~/.gitignore"
 
 [interactive]
     diffFilter = delta --color-only
@@ -21,7 +24,7 @@
 [user]
 	email = ginowashere@hotmail.com
 	name = Gino
-
+ 
 [alias]
 	co = checkout
 	br = branch
@@ -31,3 +34,6 @@
 	last = log -1 HEAD
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[includeIf "gitdir:~/projects/uni/"] # include for all .git projects under personnal/ 
+    path = "~/projects/uni/.gitconfig"
