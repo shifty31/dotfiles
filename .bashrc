@@ -100,6 +100,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias nv='nvim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -129,6 +130,7 @@ fi
 
 pathadd "$HOME"/.config/scripts/
 pathadd /usr/local/texlive/2023/bin/x86_64-linux
+pathadd "$HOME"/.local/bin
 
 export EDITOR='nvim'
 
