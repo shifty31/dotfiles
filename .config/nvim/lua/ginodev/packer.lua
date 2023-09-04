@@ -102,9 +102,14 @@ return require('packer').startup(function(use)
 
     --LaTeX
     use('lervag/vimtex')
-    -- gitsigns
 
+    -- gitsigns
     use {
         'lewis6991/gitsigns.nvim',
+    }
+
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
 end)

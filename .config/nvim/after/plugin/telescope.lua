@@ -1,4 +1,5 @@
 require("telescope").load_extension('harpoon')
+
 local options = {
     defaults = {
         vimgrep_arguments = {
@@ -49,7 +50,13 @@ local options = {
             n = { ["q"] = require("telescope.actions").close },
         },
     },
+    extensions = {
+        file_browser = {
+            hijack_netrw = true,
+        }
+    },
 
     extensions_list = { "themes", "terms" },
 }
 require("telescope").setup(options)
+require("telescope").load_extension "file_browser"

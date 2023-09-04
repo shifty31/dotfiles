@@ -27,5 +27,6 @@ vim.keymap.set('n', '<leader>fd', telescope.diagnostics, opts)
 vim.keymap.set('n', '<leader>F', telescope.live_grep, opts)
 vim.keymap.set('n', '<leader>fo', telescope.oldfiles, opts)
 
+vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser, opts)
 
 ------- nvchad config ------
