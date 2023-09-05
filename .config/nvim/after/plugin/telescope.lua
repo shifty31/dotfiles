@@ -53,6 +53,7 @@ local options = {
     extensions = {
         file_browser = {
             hijack_netrw = true,
+            initial_mode = 'normal'
         }
     },
 
