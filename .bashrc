@@ -75,6 +75,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # *)
 #     ;;
 
+# Run tmux on startup
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
 function pathadd {
   case ":$PATH:" in
     *":$1:"*) :;; # already there
@@ -142,3 +147,7 @@ alias start-pg='sudo service postgresql start'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
