@@ -109,6 +109,11 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'nvim-treesitter/nvim-treesitter-context',
+    }
+
+
+    use {
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
