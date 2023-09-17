@@ -9,6 +9,7 @@ lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
     'lua_ls',
+    'pylsp',
 })
 
 lsp.skip_server_setup({ 'help' })
