@@ -1,4 +1,5 @@
 local telescope = require("telescope")
+local actions = require("telescope.actions")
 
 local options = {
     defaults = {
@@ -47,12 +48,17 @@ local options = {
         -- Developer configurations: Not meant for general override
         buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
         mappings = {
-            n = { ["q"] = require("telescope.actions").close },
+            n = { ["q"] = actions.close },
         },
     },
     pickers = {
         buffers = {
             initial_mode = 'normal',
+            mappings = {
+                n = {
+                    ["d"] = actions.delete_buffer + actions.move_to_top
+                }
+            }
         }
 
     },
