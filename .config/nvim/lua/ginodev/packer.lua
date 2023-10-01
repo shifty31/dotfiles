@@ -112,9 +112,9 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter-context',
     }
 
-
     use {
         "nvim-telescope/telescope-file-browser.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
+    use { "lukas-reineke/indent-blankline.nvim" }
 end)
