@@ -48,7 +48,9 @@ local options = {
         -- Developer configurations: Not meant for general override
         buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
         mappings = {
-            n = { ["q"] = actions.close },
+            n = {
+                ["q"] = actions.close,
+            },
         },
     },
     pickers = {
@@ -56,7 +58,8 @@ local options = {
             initial_mode = 'normal',
             mappings = {
                 n = {
-                    ["d"] = actions.delete_buffer + actions.move_to_top
+                    ["d"] = actions.delete_buffer + actions.move_to_top,
+                    ["v"] = actions.file_vsplit
                 }
             }
         }
@@ -66,7 +69,10 @@ local options = {
         file_browser = {
             hijack_netrw = true,
             initial_mode = 'normal',
-            grouped = true
+            grouped = true,
+            select_buffer = true,
+            cwd_to_path = true,
+            path = "%:p:h"
         }
     },
 

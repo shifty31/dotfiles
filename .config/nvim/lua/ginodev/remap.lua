@@ -11,6 +11,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-w>>", "20<C-w>>")
+vim.keymap.set("n", "<C-w><", "20<C-w><")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -28,5 +30,3 @@ vim.keymap.set('n', '<leader>F', telescope.live_grep, opts)
 vim.keymap.set('n', '<leader>fo', telescope.oldfiles, opts)
 
 vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser, opts)
-
-------- nvchad config ------
