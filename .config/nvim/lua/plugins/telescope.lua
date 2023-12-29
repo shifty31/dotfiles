@@ -1,3 +1,8 @@
+local wk = require("which-key")
+wk.register({
+  ["<leader>t"] = { name = "+Telescope" },
+})
+
 return {
   {
     "nvim-telescope/telescope-file-browser.nvim",
@@ -31,10 +36,16 @@ return {
         end,
         desc = "Buffer List",
       },
+      {
+        "<leader>tk",
+        function()
+          require("telescope.builtin").keymaps()
+        end,
+        desc = "Keymaps",
+      },
     },
     opts = function()
       local actions = require("telescope.actions")
-      print("hello")
 
       local opts = {
         pickers = {
