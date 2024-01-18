@@ -43,7 +43,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "/mnt/e/Obsidian/Notes/root/",
+        path = "~/projects/notes/personal/root/",
       },
     },
     daily_notes = {
@@ -69,7 +69,7 @@ return {
     },
   },
   keys = {
-    { "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Open Today's Daily Note" },
+    { "<leader>ot", "<cmd>ObsidianToday<CR>",       desc = "Open Today's Daily Note" },
     {
       "<leader>on",
       function()
