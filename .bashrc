@@ -76,6 +76,7 @@ fi
 
 #dotfiles git config setup
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias lconf='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # If this is an xterm set the title to user@host:dir
 #
