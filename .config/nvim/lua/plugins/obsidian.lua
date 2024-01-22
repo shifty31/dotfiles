@@ -43,7 +43,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/projects/notes/personal/root/",
+        path = "~/personal/notes/",
       },
     },
     daily_notes = {
@@ -75,9 +75,12 @@ return {
     completion = {
       new_note_location = "notes_subdir",
     },
+    templates = {
+      subdir = "templates",
+    },
   },
   keys = {
-    { "<leader>ot", "<cmd>ObsidianToday<CR>",       desc = "Open Today's Daily Note" },
+    { "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Open Today's Daily Note" },
     {
       "<leader>on",
       function()
