@@ -12,6 +12,9 @@ vim.keymap.set("v", "<leader>y", '"+y', opts)
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set("n", "<C-o>", "<C-o>zz")
+vim.keymap.set("n", "<C-i>", "<C-i>zz")
+
 --disabled default keymaps
 vim.keymap.del("n", "<C-h>")
 vim.keymap.del("n", "<C-j>")
