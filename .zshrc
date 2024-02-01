@@ -66,6 +66,9 @@ CASE_SENSITIVE="false"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=~/.config/omz_custom/
 
+
+ZSH_TMUX_AUTOSTART="true"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -74,17 +77,16 @@ ZSH_CUSTOM=~/.config/omz_custom/
 plugins=(
   git
   tmux
-  vi-mode
+  # vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
+  nvm
+  fzf
+  fd
+  rust
+  starship
+  zsh-interactive-cd
 )
-
-# mkcd() {
-# 	mkdir $1 && cd $1
-# }
-# cdl() {
-# 	cd "$@" && ls
-# }
 
 # User configuration
 
@@ -105,4 +107,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-eval "$(starship init zsh)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
