@@ -3,7 +3,6 @@
 	defaultBranch = main
 
 [core]
-    ; sshCommand = "ssh -i ~/.ssh/id_ed25519"
     pager = delta
     excludesfile = "~/.gitignore"
 
@@ -22,7 +21,7 @@
     colorMoved = default
 
 [user]
-	email = ginowashere@hotmail.com
+	email = *
 	name = Gino
  
 [alias]
@@ -35,7 +34,5 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-[includeIf "gitdir:~/projects/uni/"] # include for all .git projects under personnal/ 
-    path = "~/projects/uni/.gitconfig"
 [pull]
-	rebase = false
+	rebase = true
