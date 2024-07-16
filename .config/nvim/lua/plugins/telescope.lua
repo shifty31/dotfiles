@@ -1,8 +1,8 @@
-local wk = require("which-key")
-wk.register({
-  ["<leader>t"] = { name = "+Telescope" },
-})
-
+-- local wk = require("which-key")
+-- wk.register({
+--   ["<leader>t"] = { name = "+Telescope" },
+-- })
+-- 
 return {
   {
     "nvim-telescope/telescope-file-browser.nvim",

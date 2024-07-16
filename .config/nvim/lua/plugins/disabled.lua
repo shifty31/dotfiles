@@ -12,4 +12,7 @@ return {
       return {}
     end,
   },
+  { "epwalsh/obsidian.nvim",
+  enabled = false
+  }
 }
