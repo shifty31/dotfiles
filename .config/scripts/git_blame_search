@@ -1,0 +1,1 @@
+rg end -wo --no-heading --line-number | cut -d':' -f1-2 | awk -F: '{print $1, $2}' | xargs -n2 sh -c 'git blame -L$2,$2 $1' sh
