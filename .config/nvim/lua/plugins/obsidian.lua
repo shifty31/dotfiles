@@ -1,6 +1,7 @@
+-- return {}
 -- local Input = require("nui.input")
 -- local event = require("nui.utils.autocmd").event
--- 
+--
 -- local input = Input({
 --   position = "50%",
 --   size = {
@@ -24,7 +25,7 @@
 --     vim.api.nvim_command("e " .. tostring(note.path))
 --   end,
 -- })
--- 
+--
 -- local wk = require("which-key")
 -- wk.register({
 --   ["<leader>o"] = { name = "+Obsidian" },
@@ -58,7 +59,7 @@ return {}
 --         ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
 --       },
 --     },
--- 
+--
 --     note_id_func = function(title)
 --       local suffix = ""
 --       if title ~= nil then
@@ -72,7 +73,7 @@ return {}
 --       end
 --       return tostring(os.date("%Y_%m_%d")) .. "_" .. suffix
 --     end,
--- 
+--
 --     completion = {
 --       new_note_location = "notes_subdir",
 --     },

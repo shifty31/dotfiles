@@ -1,5 +1,5 @@
 
-alias ls='exa --oneline --long --header --icons --all --group-directories-first --no-permissions --no-user --sort=name --modified --time-style=iso'
+alias ls='exa --grid --long --header --icons --all --group-directories-first --no-permissions --no-user --sort=name --modified --time-style=iso'
 alias py='python3'
 alias rmi='rm -rfi'
 alias nv='nvim'
