@@ -8,6 +8,7 @@ FZF_CTRL_T_OPTS="
 
 # Path adjustments
 path+=(~/.local/bin/)
+path+=(/opt/nvim)
 
 #zsh opts
 setopt globdots
