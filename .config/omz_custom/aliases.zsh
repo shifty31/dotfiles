@@ -4,6 +4,8 @@ alias py='python3'
 alias rmi='rm -rfi'
 alias nv='nvim'
 
+alias nconf='nvim ~/.config/'
+
 # dotfile management
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lconf='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
