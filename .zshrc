@@ -82,10 +82,10 @@ plugins=(
   zsh-syntax-highlighting
   nvm
   fzf
-  fd
   rust
   starship
   zsh-interactive-cd
+  zoxide
 )
 
 # User configuration
