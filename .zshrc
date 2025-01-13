@@ -85,6 +85,7 @@ plugins=(
   rust
   starship
   zsh-interactive-cd
+  zoxide
 )
 
 # User configuration
