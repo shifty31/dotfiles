@@ -75,6 +75,7 @@ ZSH_TMUX_AUTOSTART="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  zoxide
   git
   tmux
   # vi-mode
@@ -85,7 +86,6 @@ plugins=(
   rust
   starship
   zsh-interactive-cd
-  zoxide
 )
 
 # User configuration
