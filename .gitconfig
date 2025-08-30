@@ -21,8 +21,8 @@
     colorMoved = default
 
 [user]
-	email = *
-	name = Gino
+	email = gino.brignardello23@gmail.com
+	name = Gino Brignardello
  
 [alias]
 	co = checkout
