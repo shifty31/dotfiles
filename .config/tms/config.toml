@@ -1,0 +1,8 @@
+bookmarks = [
+    "/home/leap-gino/.config",
+    "/home/leap-gino/projects/personal",
+]
+
+[[search_dirs]]
+path = "/home/leap-gino/projects"
+depth = 10
