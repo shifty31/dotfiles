@@ -1,6 +1,6 @@
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -112,8 +112,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # pnpm
 export PNPM_HOME="/home/gino/.local/share/pnpm"
+
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
 # pnpm end
