@@ -10,3 +10,4 @@ alias nconf='nvim ~/.config/'
 # dotfile management
 alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
 alias lconf='lazygit --git-dir=$HOME/.config/ --work-tree=$HOME'
+alias gs='git br | fzf | xargs git s'
