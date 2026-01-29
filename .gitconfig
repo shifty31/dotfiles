@@ -32,8 +32,9 @@
 	s = switch
 	unstage = reset HEAD --
 	last = log -1 HEAD
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	pwf = push --force-with-lease
 
 [pull]
 	rebase = true
