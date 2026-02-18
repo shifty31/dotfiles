@@ -1013,6 +1013,7 @@ require('lazy').setup({
       indent = { enable = true, disable = { 'ruby' } },
       context = { enabled = true },
     },
+    dependencies = { 'windwp/nvim-ts-autotag' },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
     --
@@ -1040,6 +1041,7 @@ require('lazy').setup({
   require 'custom.plugins.vim-navigator',
   require 'custom.plugins.oil',
   require 'custom.plugins.trouble',
+  require 'custom.plugins.ts-autotag',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
