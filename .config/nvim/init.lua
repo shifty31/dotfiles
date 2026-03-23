@@ -783,10 +783,10 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettier', 'prettierd', stop_after_first = true },
-        typescript = { 'prettier', 'prettierd', stop_after_first = true },
-        typescriptreact = { 'prettier', 'prettierd', stop_after_first = true },
-        javascriptreact = { 'prettier', 'prettierd', stop_after_first = true },
+        javascript = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
+        typescript = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
+        typescriptreact = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
+        javascriptreact = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
       },
     },
   },
