@@ -772,7 +772,7 @@ require('lazy').setup({
           return nil
         else
           return {
-            timeout_ms = 500,
+            timeout_ms = 2500,
             lsp_format = 'fallback',
           }
         end
@@ -783,10 +783,10 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
-        typescript = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
-        typescriptreact = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
-        javascriptreact = { 'eslint_d', 'prettier', 'prettierd', stop_after_first = true },
+        javascript = { 'eslint_d', 'prettier', 'prettierd' },
+        typescript = { 'eslint_d', 'prettier', 'prettierd' },
+        typescriptreact = { 'eslint_d', 'prettier', 'prettierd' },
+        javascriptreact = { 'eslint_d', 'prettier', 'prettierd' },
       },
     },
   },
@@ -1003,8 +1003,10 @@ require('lazy').setup({
   },
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    main = 'nvim-treesitter',
+    lazy = false,
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
@@ -1049,6 +1051,7 @@ require('lazy').setup({
   require 'custom.plugins.oil',
   require 'custom.plugins.trouble',
   require 'custom.plugins.ts-autotag',
+  require 'custom.plugins.lazygit',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
