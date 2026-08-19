@@ -1,0 +1,1 @@
+{"binaries":["tms"],"binary_aliases":{},"cdylibs":[],"cstaticlibs":[],"install_layout":"cargo-home","install_prefix":"/home/leap-gino/.cargo","modify_path":true,"provider":{"source":"cargo-dist","version":"0.28.0"},"source":{"app_name":"tmux-sessionizer","name":"tmux-sessionizer","owner":"jrmoulton","release_type":"github"},"version":"0.5.0"}

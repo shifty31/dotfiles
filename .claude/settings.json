@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0,
+    "refreshInterval": 10
+  },
+  "enabledPlugins": {
+    "figma@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true
+  },
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "editorMode": "vim",
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
+}

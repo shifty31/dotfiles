@@ -10,4 +10,5 @@ alias nconf='nvim ~/.config/'
 # dotfile management
 alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
 alias lconf='lazygit --git-dir=$HOME/.config/ --work-tree=$HOME'
-alias gs='git br | fzf | xargs git s'
+alias gs='git br --sort=-committerdate | fzf --height=20% --reverse --info=inline | xargs git s'
+function aws_picker() { export AWS_PROFILE=$(rg -or '$1' '\[(.*)\]' ~/.aws/credentials | fzf --height=20%) }

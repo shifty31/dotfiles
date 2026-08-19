@@ -787,6 +787,7 @@ require('lazy').setup({
         typescript = { 'eslint_d', 'prettier', 'prettierd' },
         typescriptreact = { 'eslint_d', 'prettier', 'prettierd' },
         javascriptreact = { 'eslint_d', 'prettier', 'prettierd' },
+        cs = { 'csharpier' },
       },
     },
   },
@@ -1052,6 +1053,7 @@ require('lazy').setup({
   require 'custom.plugins.trouble',
   require 'custom.plugins.ts-autotag',
   require 'custom.plugins.lazygit',
+  require 'custom.plugins.markview',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
