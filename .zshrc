@@ -119,3 +119,6 @@ case ":$PATH:" in
 esac
 
 # pnpm end
+
+# opencode
+export PATH=/home/leap-gino/.opencode/bin:$PATH

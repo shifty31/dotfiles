@@ -1054,6 +1054,7 @@ require('lazy').setup({
   require 'custom.plugins.ts-autotag',
   require 'custom.plugins.lazygit',
   require 'custom.plugins.markview',
+  require 'custom.plugins.opencode-nvim',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
