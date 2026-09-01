@@ -1,1 +1,14 @@
 don't forget to clone tpm first
+
+things to install:
+- omz
+	- zsh autosuggest
+	- zsh syntax highlight
+- tmux
+	-tpm
+- fzf
+- starship
+- nvim
+
+- rg
+- fd
