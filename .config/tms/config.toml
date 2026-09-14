@@ -1,10 +1,7 @@
 bookmarks = [
-    "/home/leap-gino/.config",
-    "/home/leap-gino/projects/personal",
-    "/home/leap-gino/projects/litigation-debt-interest-calculator/dev",
-    "/home/leap-gino/projects/litigation-debt-interest-calculator",
+    "~/.config",
 ]
 
 [[search_dirs]]
-path = "/home/leap-gino/projects"
+path = "/Users/Gino.Brignardello/Documents/projects/"
 depth = 3

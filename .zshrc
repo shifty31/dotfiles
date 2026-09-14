@@ -80,11 +80,11 @@ plugins=(
   # vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
-  nvm
   fzf
-  rust
+	fnm
   starship
   zsh-interactive-cd
+	zoxide
 )
 
 # User configuration
@@ -113,12 +113,17 @@ export NVM_DIR="$HOME/.nvm"
 # pnpm
 export PNPM_HOME="/home/gino/.local/share/pnpm"
 
+export PATH=/home/gino/.opencode/bin:$PATH
+
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# pnpm end
+# fnm
+FNM_PATH="/opt/homebrew/opt/fnm/bin"
+if [ -d "$FNM_PATH" ]; then
+  eval "$(fnm env --shell zsh)"
+fi
 
-# opencode
-export PATH=/home/leap-gino/.opencode/bin:$PATH
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
