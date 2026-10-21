@@ -4,6 +4,7 @@ alias ls='eza  --icons -F -H --git --sort Name  --all  --group-directories-first
 alias py='python3'
 alias rmi='rm -rfi'
 alias nv='nvim'
+alias wm='workmux'
 
 alias nconf='nvim ~/.config/'
 
