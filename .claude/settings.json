@@ -1,23 +1,77 @@
 {
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "npx -y ccstatusline@latest",
-    "padding": 0,
-    "refreshInterval": 10
-  },
+  "editorMode": "vim",
   "enabledPlugins": {
     "figma@claude-plugins-official": true,
     "vercel@claude-plugins-official": true
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status waiting",
+            "type": "command"
+          }
+        ],
+        "matcher": "permission_prompt|elicitation_dialog"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "workmux register-agent",
+            "type": "command"
+          }
+        ],
+        "matcher": "startup|resume|clear|fork"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status done",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "skipAutoPermissionPrompt": true,
+  "statusLine": {
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0,
+    "refreshInterval": 10,
+    "type": "command"
   },
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
-  "editorMode": "vim",
-  "skipAutoPermissionPrompt": true,
   "voiceEnabled": true
 }

@@ -5,6 +5,8 @@ alias py='python3'
 alias rmi='rm -rfi'
 alias nv='nvim'
 alias wm='workmux'
+alias wma='workmux add -A'
+
 
 alias nconf='nvim ~/.config/'
 
